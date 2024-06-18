@@ -14,7 +14,7 @@
 <body>
 <div id="app">
     <div class="container">
-        <img v-if="isTencentApp" src="cxs/static/img/yindao.png" alt="引导页面" class="responsive-image">
+        
         <template v-else>
             <img src="cxs/static/img/banner.jpg" alt="Banner" class="responsive-image">
 
@@ -56,24 +56,7 @@
                // { id: 8, label: '邀请码查询', url: 'check/index.html' },
             ]);
 
-            function btnClick(buttonId) {
-                // 此处可以加入你希望在跳转之前执行的其他逻辑
-                // alert(`按钮${buttonId}被点击`);
-                // 使用window.location来重定向到指定的URL
-                const button = buttons.value.find(btn => btn.id === buttonId);
-                if (button && button.url) {
-                    window.location.href = button.url;
-                }
-            }
-            return {
-                isTencentApp,
-                textContent,
-                buttons,
-                btnClick
-            };
-        }
-    };
-    createApp(App).mount('#app');
+          
 </script>
 </body>
 </html>
