@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="static/img/favicon.ico">
+    <link rel="shortcut icon" href="cxs/static/img/favicon.ico">
     <title>长相思</title>
 
-    <script src="static/js/vue.global.js"></script>
-    <script src="static/js/disabledeveloper.js"></script>
-    <link type="text/css" rel="stylesheet" href="static/css/index.css" />
+    <script src="cxs/static/js/vue.global.js"></script>
+    <script src="cxs/static/js/disabledeveloper.js"></script>
+    <link type="text/css" rel="stylesheet" href="cxs/static/css/index.css" />
 </head>
 
 <body>
 <div id="app">
     <div class="container">
-        <img v-if="isTencentApp" src="static/img/yindao.png" alt="引导页面" class="responsive-image">
+        <img v-if="isTencentApp" src="cxs/static/img/yindao.png" alt="引导页面" class="responsive-image">
         <template v-else>
-            <img src="static/img/banner.jpg" alt="Banner" class="responsive-image">
+            <img src="cxs/static/img/banner.jpg" alt="Banner" class="responsive-image">
 
             <div class="text">
             <div v-for="(line, index) in textContent" :key="index">{{ line }}</div>
@@ -25,7 +25,7 @@
                 <a :href="btn.url" class="btn" @click.prevent="btnClick(btn.id)">{{ btn.label }}</a>
             </div>
 
-            <img src="static/img/footer.jpg" alt="Footer" class="responsive-image">
+            <img src="cxs/static/img/footer.jpg" alt="Footer" class="responsive-image">
         </template>
     </div>
 </div>
@@ -42,11 +42,10 @@
 
             const textContent = ref([
                 "==================================================",
-                "商务在线安装重要提示：如果您是第一次在本站在线安装APP，首次打开可能会闪退，按照下面《商务在线安装修复教程》修复闪退。一次修复，永久更新商务包。",
+                "长相思全网首发IOS超级TF全天24小时下载",
                 "==================================================",
-                "全网独家商务模式，一次下载永不掉签",
-                "特别提醒：商务模式只能在斗战神官网商务兑换选项里兑换安装",
-		        "不支持IOS15及以下系统，禁止安装！！！",
+                "全网独家TF下载，高端稳定不闪退",
+                "特别提醒："不支持IOS15及以下系统，禁止安装！！！",
             ]);
             const buttons = ref([
                 { id: 2, label: '长相思视频教程', url: 'https://video-material-tencos.lingtuo.cn/team/video/89785850/16zabg/seq/1718622804.368287.mp4' },
