@@ -1,0 +1,63 @@
+/* 重置HTML和Body的默认margin和padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+/* 重置其他元素的默认margin和padding（如有需要） */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;  /* 移除padding以确保图片紧贴边缘 */
+    max-width: 100%;  /* 设置最大宽度为100% */
+    margin: 0 auto;
+    width: 100%;
+}
+.responsive-image {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+}
+.text {
+    /*height: 50px;*/
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #e30967;  /* 和按钮一样的底色 */
+    color: rgb(255, 255, 0);  /* 白色的文本 */
+    padding: 5px;  /* 添加内边距 */
+    text-align: center;  /* 文字居中 */
+    font-size: 0.7em;  /* 减小字体大小 */
+    line-height: 20px;
+    /*border-radius: 5px;  !* 如果需要，可以添加圆角效果 *!*/
+}
+.btn {
+    display: block;  /* 将按钮设为块级元素 */
+    width: 100%;
+    padding: 10px 0;  /* 因为按钮已经是100%宽度，所以移除左右的padding */
+    /*margin-top: 10px;*/
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e30967;
+    color: #FFF;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: #fd79a8; /* 添加一个简单的悬停效果 */
+}
+.btn:focus {
+    outline: none;
+}
+.responsive-image {
+    width: 100%;
+    max-width: 100%;  /* 确保图片永远不会超过其容器的宽度 */
+    height: auto;
+    display: block;  /* 移除图片下的小间隙 */
+}
